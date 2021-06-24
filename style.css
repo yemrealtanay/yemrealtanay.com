@@ -142,10 +142,10 @@
 section{
     padding: 100px 0;
 }
-.hakkinda{
+.hakkinda, .serv{
     font-family: 'Poppins', sans-serif;
 }
-.hakkinda .title{
+section .title{
     position: relative;
     text-align: center;
     font-size: 40px;
@@ -154,7 +154,7 @@ section{
     padding-bottom: 20px;
     font-family: 'Ubuntu', sans-serif;
 }
-.hakkinda .title::before{
+section .title::before{
     content:"";
     position: absolute;
     bottom: 0px;
@@ -164,8 +164,8 @@ section{
     background: #111;
     transform: translateX(-50%);
 }
-.hakkinda .title::after{
-    content:"Ben Kimim?";
+section .title::after{
+    
     position: absolute;
     bottom: -7px;
     left: 50%;
@@ -175,7 +175,10 @@ section{
     background: white;
     transform: translateX(-50%);
 }
-.hakkinda .hakkinda-content{
+.hakkinda .title::after{
+    content:"ben kimim?";
+}
+.hakkinda .hakkinda-content, .serv .serv-content{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -220,6 +223,46 @@ section{
     background: none;
 }
 
+.serv{
+    color:white;
+    background: #0A0D14;
+}
+
+.serv .title::before{
+    background: white;
+}
+.serv .title::after{
+    background:#0A0D14;
+    content:"ne yapabilirim?"
+
+}
+.serv .serv-content .card{
+    width: calc(25% - 15px);
+    background: #0D0F14;
+    text-align: center;
+    border-radius: 6px;
+    padding: 20px 25px;
+    box-shadow: 1px;
+    cursor:pointer;
+    transition: all 0.2s ease;
+}
+.serv .serv-content .card .box{
+    transition: all 0.2s ease;
+}
+
+.serv .serv-content .card:hover .box{
+    transform: scale(1.05);
+}
+.serv .serv-content .card i{
+    font-size: 50px;
+    color:crimson;
+}
+.serv .serv-content .card .text{
+    font-size: 25px;
+    font-weight: 500;
+    margin: 10px 0 7px 0;
+    
+}
 
 
 
@@ -294,6 +337,11 @@ section{
     .hakkinda .hakkinda-content .right{
         flex: 100%;
     }
+    .serv .serv-content .card{
+        width: calc(50% - 10px);
+        margin-bottom: 15px;
+    }
+    
 
 
 }
@@ -314,6 +362,11 @@ section{
         font-size: 20px;
         padding: 8px 20px;
     }
+    .serv .serv-content .card{
+        width: 100%;
+        margin-bottom: 15px;
+    }
+    
 
 }
 
@@ -326,5 +379,6 @@ section{
     .home .home-content .text-3{
         font-size: 22px;
     }
+    
 
 }
