@@ -10,3 +10,23 @@ $(document).ready(function(){
         $('.navbar .menu').toggleClass("active");
     });
 });
+
+//home animasyonu
+
+var typed = new Typed(".typing", {
+
+    strings: ["Youtuber'ım", "Developer'ım", "Yazarım", "3D Designer'ım", "Game Designer'ım"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+
+});
+
+var typed = new Typed(".typing-2", {
+
+    strings: ["Youtuber'ım", "Developer'ım", "Yazarım", "3D Designer'ım", "Game Designer'ım"],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+
+});
